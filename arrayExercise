@@ -1,0 +1,33 @@
+// Please print out the third letter of every element in this array.
+var array = ["asdfg", "sdfg", "jsfdgs"];
+// first method : for loop
+for (i = 0; i < array.length; i++) {
+	console.log(array[i][4]);
+}
+
+// second method : foreach
+array.forEach(function(name){
+console.log(name[4]);
+});
+
+// third method : map
+const map1 = array.map(function(name){
+	console.log(name[4]);
+	return name[4];
+});
+// return value in map1
+console.log(map1);
+
+// another map method
+const map2 = array.map(x=> x[4]); // fat arrow operator
+const map3 = array.map(function(x) {return x[4]});
+console.log(map2);
+console.log(map3);
+
+// array contains numbers, print out those which can be divided by 2.
+var numbers = [12,52,11,30];
+numbers.forEach(function(number){
+	if(number%2 === 0){
+		console.log(number);
+	}
+});
