@@ -1,0 +1,116 @@
+/*
+As a user, I should be able to select an option from following through variable 'functionToOperate':
+1 search a student by name and know his index location in an array
+2 add a new student
+3 remove a student
+4 display all students
+5 display all students sorted by name
+6 display a random student's name
+7 take the third letter of every student's name, append it to the beginning of their name and display the sorted list of students 
+ 
+Regarding sorting: The list should be sorted alphabetically irrespective of the case of the name.
+For example, Ajohn, Lorem, Ipsum, foo, bar, list of students should be sorted as:
+ 
+-> Ajohn, , bar, foo, Ipsum, Lorem       */
+
+
+
+/* this assignment is completed by Yangyang Ma (1896156) */
+// an array of strings, every element is the name of a student
+var students = ["John", "Lea", "Tylor", "Daisy", "Ryan", "Rimi", "Emma", "Ting", "Grace", "Alex", "George", "Francois", "Vivian", "Tom", "Sarah", "Paul", "Mai", "Yolanda", "Yan", "Sunny", "Lien"];
+
+
+var functionToOperate = 1;
+switch (functionToOperate) {
+    case 1:
+        /* function 1: search the student's name, 
+           return the index location in this array 
+           parameter: name (string) 
+           return : index (integer)                */
+        var search = function (name) {
+            return students.indexOf(name);
+        };
+        // call this function
+        search("Emma");
+        break;
+
+    case 2:
+        /* function 2: add a new student, 
+           return the new length of this array 
+           parameter: name (string) 
+           return : length (integer)               */
+        var add = function (name) {
+            return students.push(name);
+        };
+        add("Cai");
+        break;
+
+    case 3:
+        /* function 3: remove a student, 
+           remove the last student in this array,
+           return the the name of this removed student 
+           return: name (string)               */
+        var remove = function () {
+            return students.pop();
+        }
+        remove();
+        break;
+
+    case 4:
+        /* function 4: display all students, 
+           return this array          
+           return : students (array)                  */
+        var display = function () {
+            console.log(students);
+        }
+        display();
+        break;
+
+    case 5:
+        /* function 5: display all students sorted by name, 
+           return this array 
+           parameter: name (string) 
+           return : students (array)                  */
+        var sorted = function () {
+            return students.sort();
+        }
+        sorted();
+        break;
+
+    case 6:
+        /* function 6: display a random student's name, 
+           return a random name in this array 
+           return : name (string)                 */
+        var randomDisplay = function () {
+            console.log(students[Math.floor(Math.random() * students.length)]);
+        }
+        randomDisplay();
+        break;
+
+    case 7:
+        /* function 7: loop every element in this array, 
+           take the third letter of every element,
+           append it to the beginning of their name,
+           display sorted array. 
+           return : new students'name (new array)                */
+        var newArray = function () {
+            for (var i = 0; i < students.length; i++) {
+                students[i] = students[i].charAt(2) + students[i];
+            };
+            console.log(students.sort());
+        }
+        newArray();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
