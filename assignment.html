@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome Page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Yangyang Ma">
+    <style>
+        body {
+            background-color: lightblue;
+            margin-left: 15%;
+            margin-right: 15%;
+            border: 2px dotted gray;
+            padding: 10px;
+            font-family: sans-serif;
+        }
+    </style>
+    <script src="myJS.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome</h1>
+    </header>
+    <!-- 1.Search whether in the list by name -->
+    <input type="text" name="place" id="firstInput" />
+    <button onclick="search()">Search name</button>
+    <div id="searchName" style="color:rgb(112, 7, 7);"></div>
+
+    <!-- 2.add a new student to the list -->
+    Name:<input type="text" name="place" id="secondInput" />
+    Age:<input type="text" name="place" id="thirdInput" />
+    <button onclick="add()">add</button><br/>
+    <div id="addElement" style="color:rgb(112, 7, 7);"></div>
+
+    <!-- 3.remove the last student -->
+    <button onclick="remove()">remove the last</button>
+    <div id="removeName" style="color:rgb(112, 7, 7);"></div>
+    
+
+    <!-- 4.display the students -->
+    <button onclick="displayAll()">display all</button>
+    
+    
+<!-- 5.display all students sorted by name -->
+<button onclick="displaySorted()">display sorted</button>
+
+<!-- 6.display a random student's name -->
+<button onclick="random()">random name</button>
+
+<!-- function 7: loop every element in this array, 
+take the third letter of every element,
+append it to the beginning of their name,
+display sorted array.               -->
+<button onclick="newStudent()">New students</button>
+
+
+<div id="displayAll" style="color:rgb(112, 7, 7);"></div>
+
+    
+    
+</body>
+</html>
