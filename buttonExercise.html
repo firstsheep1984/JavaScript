@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome Page</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Yangyang Ma">
+    <style>
+        body {
+            background-color: lightblue;
+            margin-left: 15%;
+            margin-right: 15%;
+            border: 2px dotted gray;
+            padding: 10px;
+            font-family: sans-serif;
+        }
+    </style>
+    <script src="./jquery-3.3.1.js"></script>
+    <script src="buttonExerciseJS.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Button Exercise</h1>
+    </header>
+
+    <!-- 1.input text -->
+    <input type="text" name="place" id="firstInput" />
+
+    <!-- 2.button : set default -->
+    <button onclick="set()">set default</button>
+    <br/>
+
+    <!-- 3.button : clear -->
+    <button onclick="clearMe()" style="margin-left:178px;margin-top:15px;">clear</button>
+    <br/>
+
+
+    <!-- 4.button : clear default>-->
+    <button onclick="clearDefault()" style="margin-left:178px;margin-top:15px;">clear default</button>
+    <br/>
+
+    <!-- 5.button "change color" -->
+    <button onclick="changeColor()" style="margin-left:178px;margin-top:15px;">change color</button><br/>
+
+    <!-- 6.button about AJAX -->
+    <button onclick="sendData()" style="margin-left:178px;margin-top:15px;">send</button>
+
+        <!-- 7.another button about AJAX using jquery-->
+        <button onclick="sendData2()" style="margin-left:178px;margin-top:15px;">send2</button>
+        
+
+    <div style="color:red;margin-top:30px;" id="displayAll"></div>
+
+
+
+
+
+
+
+</body>
+
+</html>
